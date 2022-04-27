@@ -1,36 +1,5 @@
 # SortingHat
 
-First Download .Net 6
-https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.202-windows-x64-installer
-
-Open via Visual Studio Code
-
-<img width="382" alt="image" src="https://user-images.githubusercontent.com/53041460/165452104-d08cd4b9-f544-4a24-a7cc-a5ab1021022b.png">
-
-<img width="328" alt="image" src="https://user-images.githubusercontent.com/53041460/165452497-ebdafffa-d0d0-44e7-9147-ceb6cec829c2.png">
-
-<img width="644" alt="image" src="https://user-images.githubusercontent.com/53041460/165452519-dea52214-e829-4dda-9352-e41e91618f91.png">
-
-<img width="324" alt="image" src="https://user-images.githubusercontent.com/53041460/165452551-fb3c807b-cf62-4b2b-9914-0a94c60b1009.png">
-
-Look at the terminal
-you will see this line
-<img width="610" alt="image" src="https://user-images.githubusercontent.com/53041460/165454180-4b545a8b-04b3-443c-b774-3258b0bd2611.png">
-
-
-https://localhost:7165/swagger/index.html
-
-Click "Try out" and put the list of name to test
-
-<img width="1468" alt="image" src="https://user-images.githubusercontent.com/53041460/165453166-51998505-db82-466f-bdfc-f4efc30e4371.png">
-
-<img width="1453" alt="image" src="https://user-images.githubusercontent.com/53041460/165453202-9fccd6cf-54d2-491a-aafe-abed3fe96a14.png">
-
-they'll response 
-
-<img width="1422" alt="image" src="https://user-images.githubusercontent.com/53041460/165453340-b402fa9f-bc6d-4914-b6c2-6a84c808f6b5.png">
-
-
 List Test Name
 
 [
@@ -85,3 +54,59 @@ List Test Name
     ,"Oliver"
     ,"Katie"
 ]
+
+<====================== Azure Cloud ======================>
+
+https://harrysortinghat.azurewebsites.net/swagger/index.html
+
+Click "Try it out"
+
+<img width="1461" alt="image" src="https://user-images.githubusercontent.com/53041460/165459288-367dfd10-6a73-4332-b4fe-603e5e4c6404.png">
+
+and then in put List name Like this after that click the button "Execute" 
+
+<img width="1444" alt="image" src="https://user-images.githubusercontent.com/53041460/165459954-11ce118e-071d-425e-989b-0f02d171419c.png">
+
+You'll see the response from server
+
+<img width="1426" alt="image" src="https://user-images.githubusercontent.com/53041460/165460128-65d2c1ac-a121-444c-a8ab-973e28a95494.png">
+
+
+
+
+<====================== Client =========================>
+
+First Download .Net 6
+
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.202-windows-x64-installer
+
+Open via Visual Studio Code
+
+<img width="382" alt="image" src="https://user-images.githubusercontent.com/53041460/165452104-d08cd4b9-f544-4a24-a7cc-a5ab1021022b.png">
+
+<img width="328" alt="image" src="https://user-images.githubusercontent.com/53041460/165452497-ebdafffa-d0d0-44e7-9147-ceb6cec829c2.png">
+
+<img width="644" alt="image" src="https://user-images.githubusercontent.com/53041460/165452519-dea52214-e829-4dda-9352-e41e91618f91.png">
+
+<img width="324" alt="image" src="https://user-images.githubusercontent.com/53041460/165452551-fb3c807b-cf62-4b2b-9914-0a94c60b1009.png">
+
+Look at the terminal
+you will see this line
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/53041460/165454180-4b545a8b-04b3-443c-b774-3258b0bd2611.png">
+
+
+https://localhost:7165/swagger/index.html
+
+Click "Try it out" and put the list of name to test
+
+<img width="1468" alt="image" src="https://user-images.githubusercontent.com/53041460/165453166-51998505-db82-466f-bdfc-f4efc30e4371.png">
+
+<img width="1453" alt="image" src="https://user-images.githubusercontent.com/53041460/165453202-9fccd6cf-54d2-491a-aafe-abed3fe96a14.png">
+
+they'll response 
+
+<img width="1422" alt="image" src="https://user-images.githubusercontent.com/53041460/165453340-b402fa9f-bc6d-4914-b6c2-6a84c808f6b5.png">
+
+
+
+
