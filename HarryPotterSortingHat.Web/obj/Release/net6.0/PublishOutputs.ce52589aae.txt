@@ -1,0 +1,16 @@
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/HarryPotterSortingHat.Web
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/appsettings.Development.json
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/appsettings.json
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/HarryPotterSortingHat.Web.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/HarryPotterSortingHat.Web.deps.json
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/HarryPotterSortingHat.Web.runtimeconfig.json
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/HarryPotterSortingHat.Web.pdb
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Authorization.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Components.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Components.Forms.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Components.Web.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.AspNetCore.Metadata.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/Microsoft.JSInterop.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/MudBlazor.dll
+/Users/flintstone/Projects/HarryPotter_SortingHat/HarryPotterSortingHat.Web/obj/Release/net6.0/PubTmp/Out/System.IO.Pipelines.dll

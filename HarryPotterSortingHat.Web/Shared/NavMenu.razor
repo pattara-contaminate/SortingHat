@@ -1,0 +1,24 @@
+﻿@inject NavigationManager NavigationManager
+
+<div class="top-row pl-4 navbar navbar-dark"
+     style="height:8rem; background-color:rgba(255,255,255,0.95); cursor:pointer;">
+    <div class="my-3 pl-4" @onclick="@(() => NavigationManager.NavigateTo("/"))">
+        <img src="/images/Hogwarts_House.png" style="height:auto; width:8rem;" />
+    </div>
+</div>
+
+<MudNavMenu>
+    <MudText Typo="Typo.subtitle2" Color="Color.Inherit" Class="mt-16 ml-4 my-3">Hogwarts House</MudText>
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Rounded.Dashboard">Dashboard</MudNavLink>
+
+    @*<MudNavLink Href="Student" Icon="@Icons.Rounded.Download" Disabled="false">Student</MudNavLink>*@
+
+    <MudDivider Class="my-2" />
+
+</MudNavMenu>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+}

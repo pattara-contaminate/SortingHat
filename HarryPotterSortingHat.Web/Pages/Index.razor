@@ -1,0 +1,228 @@
+﻿@page "/"
+
+<MudGrid>
+    <MudItem xs="12" sm="6">
+        <MudPaper Class="pa-4">
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="index" InputData="@data" InputLabels="@labels">
+                <CustomGraphics>
+                    <text class="donut-inner-text" x="47%" y="35%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="2">Total</text>
+                    <text class="donut-inner-text" x="47%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="black" font-family="Helvetica" font-size="5">@students.Count.ToString()</text>
+                </CustomGraphics>
+            </MudChart>
+        </MudPaper>
+        <MudPaper Class="pa-4 mt-2 d-flex justify-center">
+            <MudButton @onclick="RandomizeData" Variant="Variant.Filled" Class="mx-4">Randomize</MudButton>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="6">
+        <div class="d-flex flex-grow-1 gap-4">
+            @foreach (var h in houses)
+            {
+                <MudCard Class="my-2">
+                    <img src="@($"images/{h.Name}.png")" width="80" height="100" class="ml-4" />
+                    @*<MudCardMedia Image=@($"images/{h.Name}.png") Style="max-width:90%;" />*@
+                    <MudCardContent>
+                        <MudText Typo="Typo.h5">@h.Name</MudText>
+                        <MudText Typo="Typo.body2">Number of Student : @h.NumberStudents</MudText>
+                    </MudCardContent>
+                </MudCard>
+                @*<MudButton Class="ma-2" Variant="Variant.Filled" Color="@Color.Primary">@($"{h.Name} : {h.NumberStudents}")</MudButton>*@
+            }
+        </div>
+
+        <MudPaper Class="d-flex my-4 pa-4" Elevation="3">
+            <MudText Class="ma-4">Name</MudText>
+            <MudTextField @bind-Value="student.Name" Immediate Label="Name" Variant="Variant.Outlined" Class="ma-2" Margin="Margin.Dense" Required Clearable></MudTextField>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AddNew" Class="ma-2">Add</MudButton>
+        </MudPaper>
+    </MudItem>
+
+    @*<MudItem xs="12" sm="6" Class="pa-4">
+            <MudTextField @bind-Value="student.Name" Immediate Label="Name" Variant="Variant.Outlined" Class="ma-4" Margin="Margin.Dense" Required Clearable></MudTextField>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="AddNew" Class="ma-4">Add</MudButton>
+        </MudItem>*@
+
+    <MudItem xs="12">
+
+
+        <MudPaper Class="pa-4" Elevation="3">
+            <MudTable @bind-Items="students">
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6" Color="@Color.Primary">Students</MudText>
+                </ToolBarContent>
+
+                <HeaderContent>
+                    <MudTh>#</MudTh>
+                    <MudTh>Name</MudTh>
+                    <MudTh>House</MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="#">@(students.IndexOf(context)+1)</MudTd>
+                    <MudTd DataLabel="Name">@context.Name</MudTd>
+                    <MudTd DataLabel="House">@context.House</MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager PageSizeOptions="new int[] { 10, 20 }" />
+                </PagerContent>
+            </MudTable>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+
+    public List<Student> students { get; set; } = new();
+    public Student student { get; set; } = new();
+    public List<House> houses { get; set; } = new();
+
+    private int index = -1;
+    int dataSize = 4;
+    public double[] data = { 13, 13, 12, 12 };
+    public string[] labels = { $"Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin" };
+
+    Random random = new Random();
+
+    protected override async Task OnInitializedAsync()
+    {
+        RandomizeData();
+        await base.OnInitializedAsync();
+    }
+
+    async void AddNew()
+    {
+        students.Add(new(student.Name));
+        ReCal();
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+    void ReCal()
+    {
+        //Sorting
+        foreach (var s in students)
+        {
+            Random random = new Random();
+            s.House = Enum.GetName(typeof(HouseEnum), random.Next(1, 5));
+        }
+
+        //Create House and put student in it
+        houses = new();
+        foreach (var h in students.Select(a => a.House).Distinct().ToList())
+        {
+            House house = new(h) { Students = students.Where(a => a.House == h).OrderBy(a => a.Name).ToList() };
+            houses.Add(house);
+        }
+
+        //Spreading
+        var avg = (int)Math.Ceiling(students.Count / 4.0);
+        houses = houses.OrderByDescending(a => a.NumberStudents).ToList();
+
+        List<Student> centers = new();
+
+        //Get student from house that there are number of student more than avg
+        houses.ForEach(h =>
+        {
+            var Num = h.NumberStudents - avg;
+            if (Num > 0)
+            {
+                var list = h.Students.Take(Num).ToList();
+                centers.AddRange(list);
+                h.Students.RemoveAll(a => list.Select(b => b.Id).Contains(a.Id));
+            }
+        });
+
+        houses.Where(a => a.NumberStudents < avg).ToList().ForEach(h =>
+        {
+            var num = avg - 1 - h.NumberStudents;
+            var s = centers.Take(num).ToList();
+            h.Students.AddRange(s);
+            centers.RemoveAll(a => s.Select(b => b.Id).Contains(a.Id));
+        });
+
+        int i = 0;
+        foreach (var c in centers)
+        {
+            if (i > 3) i = 0;
+            houses[i++].Students.Add(c);
+        }
+
+        //Re-Naming
+        houses.ForEach(h =>
+        {
+            h.Students.ForEach(s => s.House = h.Name);
+        });
+
+        labels = houses.Select(a => a.Name).ToArray();
+        data = houses.Select(a => (double)a.NumberStudents).ToArray();
+
+        StateHasChanged();
+    }
+
+    void RandomizeData()
+    {
+        students = listName.Select(a => new Student(a)).ToList();
+
+        ReCal();
+    }
+
+    List<string> listName = new()
+    {
+            "Hannah",
+            "Susan",
+            "Trevor",
+            "Mandy",
+            "Lavender",
+            "Millicent",
+            "Michael",
+            "Stephen",
+            "Vincent",
+            "Tracey",
+            "Kevin",
+            "Justin",
+            "Seamus",
+            "Anthony",
+            "Gregory",
+            "Hermione",
+            "Queenie",
+            "Wayne",
+            "Megan",
+            "Sue",
+            "Neville",
+            "Isobel",
+            "Ernest",
+            "Draco",
+            "Roger",
+            "Lily",
+            "Theodore",
+            "Pansy",
+            "Madhari",
+            "Mati",
+            "Sally-Anne",
+            "Harry",
+            "Quirrel",
+            "Oliver",
+            "Sophie",
+            "Sally",
+            "Gary",
+            "Lisa",
+            "Ronald",
+            "Blaise",
+            "Daniel",
+            "Emma",
+            "Rupert",
+            "Tom",
+            "Matthew",
+            "Evanna",
+            "Bonnie",
+            "James",
+            "Oliver",
+            "Katie"
+        };
+
+
+
+
+}
+
