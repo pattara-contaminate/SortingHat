@@ -13,6 +13,11 @@ Open via Visual Studio Code
 
 <img width="324" alt="image" src="https://user-images.githubusercontent.com/53041460/165452551-fb3c807b-cf62-4b2b-9914-0a94c60b1009.png">
 
+Look at the terminal
+you will see this line
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/53041460/165454180-4b545a8b-04b3-443c-b774-3258b0bd2611.png">
+
+
 https://localhost:7165/swagger/index.html
 
 Click "Try out" and put the list of name to test
