@@ -61,7 +61,7 @@ List Test Name
 
 <====================== Azure Cloud ======================>
 
-https://harrysortinghat.azurewebsites.net/swagger/index.html
+https://harrysortinghat.azurewebsites.net/
 
 
 
