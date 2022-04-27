@@ -1,6 +1,6 @@
 # SortingHat
 
-Download .Net 6
+First Download .Net 6
 https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.202-windows-x64-installer
 
 Open via Visual Studio Code
