@@ -24,7 +24,7 @@
                     @*<MudCardMedia Image=@($"images/{h.Name}.png") Style="max-width:90%;" />*@
                     <MudCardContent>
                         <MudText Typo="Typo.h5">@h.Name</MudText>
-                        <MudText Typo="Typo.body2">Number of Student : @h.NumberStudents</MudText>
+                        <MudText Typo="Typo.body2">Number of Student : <MudChip Color="Color.Secondary">@h.NumberStudents</MudChip></MudText>
                     </MudCardContent>
                 </MudCard>
                 @*<MudButton Class="ma-2" Variant="Variant.Filled" Color="@Color.Primary">@($"{h.Name} : {h.NumberStudents}")</MudButton>*@

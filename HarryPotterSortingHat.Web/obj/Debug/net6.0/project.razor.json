@@ -12,6 +12,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -1671813466,
+        "Kind": "Components.Component",
+        "Name": "HarryPotterSortingHat.Web.Pages.Index",
+        "AssemblyName": "HarryPotterSortingHat.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HarryPotterSortingHat.Web.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1385718694,
+        "Kind": "Components.Component",
+        "Name": "HarryPotterSortingHat.Web.Pages.Index",
+        "AssemblyName": "HarryPotterSortingHat.Web",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HarryPotterSortingHat.Web.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HarryPotterSortingHat.Web.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1628770000,
         "Kind": "Components.Component",
         "Name": "HarryPotterSortingHat.Web.Pages.Counter",
@@ -78,68 +111,35 @@
         }
       },
       {
-        "HashCode": -1671813466,
+        "HashCode": 1209963395,
         "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.Pages.Index",
+        "Name": "HarryPotterSortingHat.Web.Shared.NavMenu",
         "AssemblyName": "HarryPotterSortingHat.Web",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.Pages.Index"
+          "Common.TypeName": "HarryPotterSortingHat.Web.Shared.NavMenu"
         }
       },
       {
-        "HashCode": 1385718694,
+        "HashCode": -1313516561,
         "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.Pages.Index",
+        "Name": "HarryPotterSortingHat.Web.Shared.NavMenu",
         "AssemblyName": "HarryPotterSortingHat.Web",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HarryPotterSortingHat.Web.Pages.Index"
+            "TagName": "HarryPotterSortingHat.Web.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -648531447,
-        "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.App",
-        "AssemblyName": "HarryPotterSortingHat.Web",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.App"
-        }
-      },
-      {
-        "HashCode": -145495372,
-        "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.App",
-        "AssemblyName": "HarryPotterSortingHat.Web",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HarryPotterSortingHat.Web.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.App",
+          "Common.TypeName": "HarryPotterSortingHat.Web.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -293,35 +293,35 @@
         }
       },
       {
-        "HashCode": 1209963395,
+        "HashCode": -648531447,
         "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.Shared.NavMenu",
+        "Name": "HarryPotterSortingHat.Web.App",
         "AssemblyName": "HarryPotterSortingHat.Web",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.Shared.NavMenu"
+          "Common.TypeName": "HarryPotterSortingHat.Web.App"
         }
       },
       {
-        "HashCode": -1313516561,
+        "HashCode": -145495372,
         "Kind": "Components.Component",
-        "Name": "HarryPotterSortingHat.Web.Shared.NavMenu",
+        "Name": "HarryPotterSortingHat.Web.App",
         "AssemblyName": "HarryPotterSortingHat.Web",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HarryPotterSortingHat.Web.Shared.NavMenu"
+            "TagName": "HarryPotterSortingHat.Web.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HarryPotterSortingHat.Web.Shared.NavMenu",
+          "Common.TypeName": "HarryPotterSortingHat.Web.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
